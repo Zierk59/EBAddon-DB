@@ -1,0 +1,539 @@
+{
+	"database":
+	{
+		"Aatrox":
+		{
+			"Aatrox":"forum | github",
+			"Another addon":"forum123 | github",
+			"Super aatrox":"forum1234 | github"
+		},
+		"Ahri":
+		{
+			"Ahri":"forum|github|path"
+		},
+		"Akali":
+		{
+
+		},
+		"Alistar":
+		{
+
+		},
+		"Amumu":
+		{
+
+		},
+		"Anivia":
+		{
+
+		},
+		"Annie":
+		{
+
+		},
+		"Ashe":
+		{
+
+		},
+		"Aurelion Sol":
+		{
+
+		},
+		"Azir":
+		{
+
+		},
+		"Bard":
+		{
+
+		},
+		"Blitzcrank":
+		{
+
+		},
+		"Brand":
+		{
+
+		},
+		"Braum":
+		{
+
+		},
+		"Caitlyn":
+		{
+
+		},
+		"Camille":
+		{
+
+		},
+		"Cassiopedia":
+		{
+
+		},
+		"Cho'Gath":
+		{
+
+		},
+		"Corki":
+		{
+
+		},
+		"Darius":
+		{
+
+		},
+		"Diana":
+		{
+
+		},
+		"Dr. Mundo":
+		{
+
+		},
+		"Draven":
+		{
+
+		},
+		"Ekko":
+		{
+
+		},
+		"Elise":
+		{
+
+		},
+		"Evelynn":
+		{
+
+		},
+		"Ezreal":
+		{
+
+		},
+		"Fiddlesticks":
+		{
+
+		},
+		"Fiora":
+		{
+
+		},
+		"Fizz":
+		{
+
+		},
+		"Galio":
+		{
+
+		},
+		"Gangplank":
+		{
+
+		},
+		"Garen":
+		{
+
+		},
+		"Gnar":
+		{
+
+		},
+		"Gragas":
+		{
+
+		},
+		"Graves":
+		{
+
+		},
+		"Hecarim":
+		{
+
+		},
+		"Illaoi":
+		{
+
+		},
+		"Irelia":
+		{
+
+		},
+		"Ivern":
+		{
+
+		},
+		"Janna":
+		{
+
+		},
+		"Jarvan IV":
+		{
+
+		},
+		"Jax":
+		{
+
+		},
+		"Jayce":
+		{
+
+		},
+		"Jhin":
+		{
+
+		},
+		"Jinx":
+		{
+
+		},
+		"Kalista":
+		{
+
+		},
+		"Karma":
+		{
+
+		},
+		"Karthus":
+		{
+
+		},
+		"Kassadin":
+		{
+
+		},
+		"Katarina":
+		{
+
+		},
+		"Kayle":
+		{
+
+		},
+		"Kennen":
+		{
+			"UBKennen":"https://www.elobuddy.net/topic/44536-71-ubaddons/ | https://github.com/Uzumaki-Boruto/EloBuddy-Addons"
+		},
+		"KhaZix":
+		{
+
+		},
+		"Kindred":
+		{
+
+		},
+		"Kled":
+		{
+
+		},
+		"Kog'Maw":
+		{
+
+		},
+		"Le Blanc":
+		{
+
+		},
+		"LeeSin":
+		{
+
+		},
+		"Leona":
+		{
+
+		},
+		"Lissandra":
+		{
+
+		},
+		"Lucian":
+		{
+
+		},
+		"Lulu":
+		{
+
+		},
+		"Lux":
+		{
+
+		},
+		"Malphite":
+		{
+
+		},
+		"Malzahar":
+		{
+
+		},
+		"Maokai":
+		{
+
+		},
+		"Master Yi":
+		{
+
+		},
+		"Miss Fortune":
+		{
+
+		},
+		"Mordekaiser":
+		{
+
+		},
+		"Morgana":
+		{
+
+		},
+		"Nami":
+		{
+
+		},
+		"Nasus":
+		{
+
+		},
+		"Nautilus":
+		{
+
+		},
+		"Nidalee":
+		{
+
+		},
+		"Nocturne":
+		{
+
+		},
+		"Nunu":
+		{
+
+		},
+		"Olaf":
+		{
+
+		},
+		"Orianna":
+		{
+
+		},
+		"Pantheon":
+		{
+
+		},
+		"Poppy":
+		{
+
+		},
+		"Quinn":
+		{
+
+		},
+		"Rammus":
+		{
+
+		},
+		"Rek'Sai":
+		{
+
+		},
+		"Renekton":
+		{
+
+		},
+		"Rengar":
+		{
+
+		},
+		"Riven":
+		{
+
+		},
+		"Rumble":
+		{
+
+		},
+		"Ryze":
+		{
+
+		},
+		"Sejuani":
+		{
+
+		},
+		"Shaco":
+		{
+
+		},
+		"Shen":
+		{
+
+		},
+		"Shyvana":
+		{
+
+		},
+		"Singed":
+		{
+
+		},
+		"Sion":
+		{
+
+		},
+		"Sivir":
+		{
+
+		},
+		"Skarner":
+		{
+
+		},
+		"Sona":
+		{
+
+		},
+		"Soraka":
+		{
+
+		},
+		"Swain":
+		{
+
+		},
+		"Syndra":
+		{
+
+		},
+		"TahmKench":
+		{
+
+		},
+		"Taliyah":
+		{
+
+		},
+		"Talon":
+		{
+
+		},
+		"Taric":
+		{
+
+		},
+		"Teemo":
+		{
+
+		},
+		"Thresh":
+		{
+
+		},
+		"Tristana":
+		{
+
+		},
+		"Trundle":
+		{
+
+		},
+		"Tryndamere":
+		{
+
+		},
+		"Twisted Fate":
+		{
+
+		},
+		"Twitch":
+		{
+
+		},
+		"Udyr":
+		{
+
+		},
+		"Urgot":
+		{
+
+		},
+		"Varus":
+		{
+
+		},
+		"Vayne":
+		{
+
+		},
+		"Veigar":
+		{
+
+		},
+		"VelKoz":
+		{
+
+		},
+		"Vi":
+		{
+
+		},
+		"Victor":
+		{
+
+		},
+		"Vladimir":
+		{
+
+		},
+		"Volibear":
+		{
+
+		},
+		"Warwick":
+		{
+
+		},
+		"Wukong":
+		{
+
+		},
+		"Xerath":
+		{
+
+		},
+		"XinZhao":
+		{
+
+		},
+		"Yasuo":
+		{
+
+		},
+		"Yorick":
+		{
+
+		},
+		"Zac":
+		{
+
+		},
+		"Zed":
+		{
+
+		},
+		"Ziggs":
+		{
+
+		},
+		"Zilean":
+		{
+
+		},
+		"Zyra":
+		{
+
+		}
+	}
+}

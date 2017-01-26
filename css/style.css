@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto:100,300,400');
+
+body {
+	font-family: 'Lato', sans-serif;
+	padding-top: 20px;
+  	padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 900px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+/* Menu padding */
+.nav {
+	padding-top: 20px;
+}
+
+.form-control {
+	margin-bottom: 5px;
+}
+
+.list-group-item {
+	height: 55px;
+	padding-top: 18px;
+}
+
+/* Custom elements */
+
+.search-champion-nav {
+
+}
+
+.search-champion-box {
+	width: 260px;
+	display: inline-block;
+}
+
+.search-champion-role {
+	display: inline-block;
+}
+
+.search-champion-role button {
+	width: 78px; 
+	height: 78px;
+	margin-top: -5px;
+}
+
+/* ----- */
+
+.champion-list {
+	width: 260px;
+	overflow-y: scroll;
+	max-height: 420px;
+	display: inline-block;
+
+	border-top: 1px rgba(0, 0, 0, 0.1) solid; 
+	border-top-right-radius: 2px; 
+	border-top-left-radius: 2px;
+
+	border-bottom: 1px rgba(0, 0, 0, 0.1) solid; 
+	border-bottom-right-radius: 2px; 
+	border-bottom-left-radius: 2px;
+}	
+
+.champion-list .avatar {
+	float: right;
+	width: 35px;
+	margin-top: -9px;
+}
+
+.champion-info {
+	display: inline-block;
+	width: 605px;
+	vertical-align: top;
+}
+
+.champion-info .buttons {
+	margin-top: -8px;
+}
