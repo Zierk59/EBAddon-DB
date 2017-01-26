@@ -73,6 +73,8 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://use.fontawesome.com/2ac8283ad1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
 
 	<script type="text/javascript">
 		Array.prototype.contains = function(obj) {
@@ -90,12 +92,13 @@
 		}
 
 		var addon_database = "";
-		$.getJSON("js/database.json", function(json) {
-			addon_database = json;
-			champions_CreateList();
+		$.getJSON("databases/addon-database.json", function(json) {
+				addon_database = json;
+				champions_CreateList();
+			}).fail(function(jqXHR) {
+		    	bootbox.alert("There is a problem with addon database!");
 		});
 
-		/* My Code */
 		var addons_list = new Array(),
 			champion_list = new Array(),
 			sorted_by = "type_All";
