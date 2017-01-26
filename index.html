@@ -1,235 +1,233 @@
 <html lang="en">
 
 <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta name="author" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-		<title>Addon Database</title>
+    <title>Addon Database</title>
 
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 </head>
+
 <body>
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation"><a href="#">Home</a>
+                    </li>
+                    <li role="presentation" class="active"><a href="#">Champion Addons</a>
+                    </li>
+                    <li role="presentation"><a href="#">Buddy Addons</a>
+                    </li>
+                    <li role="presentation"><a href="#">Utility Addons</a>
+                    </li>
+                    <li role="presentation"><a href="#">Paid Addons</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted"> <img src="images/logo.png"> </h3>
+        </div>
 
-	<div class="container">
-		<div class="header clearfix">
-			<nav>
-		  		<ul class="nav nav-pills pull-right">
-					<li role="presentation"><a href="#">Home</a></li>
-					<li role="presentation" class="active"><a href="#">Champion Addons</a></li>
-					<li role="presentation"><a href="#">Buddy Addons</a></li>
-					<li role="presentation"><a href="#">Utility Addons</a></li>
-					<li role="presentation"><a href="#">Paid Addons</a></li>
-		 	 </ul>
-			</nav>
-			<h3 class="text-muted"> <img src="images/logo.png"> </h3>
-	  	</div>
+        <div class="search-champion-nav">
+            <div class="search-champion-box">
+                <input id="champion_searchBox" class="form-control" oninput="champions_CreateList();" type="text" autocomplete="off" placeholder="Search by Champion Name...">
+                <select id="champion_listType" class="form-control" onchange="champions_CreateList();">
+                    <option value="all_champions">All Champions</option>
+                    <option selected="selected" value="scripts_available">Scripts Available</option>
+                    <option value="scripts_notavailable">Scripts Not Available</option>
+                </select>
+            </div>
+            <div id="search-champion-role" class="search-champion-role pull-right">
+                <button id="type_All" value="selected" class="btn btn-default active" onclick="champions_SortList(this)"><img src="images/roles/all.png" width="100%">
+                </button>
+                <button id="type_Marksman" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/marksman.png" width="100%">
+                </button>
+                <button id="type_Assasin" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/assasin.png" width="100%">
+                </button>
+                <button id="type_Fighter" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/fighter.png" width="100%">
+                </button>
+                <button id="type_Mage" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/mage.png" width="100%">
+                </button>
+                <button id="type_Support" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/support.png" width="100%">
+                </button>
+                <button id="type_Tank" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/tank.png" width="100%">
+                </button>
+            </div>
+        </div>
 
-	  	<div class="search-champion-nav">
-	  		<div class="search-champion-box">
-		  		<input id="champion_searchBox" class="form-control" oninput="champions_CreateList();" type="text" autocomplete="off" placeholder="Search by Champion Name...">
-				<select id="champion_listType" class="form-control" onchange="champions_CreateList();">
-					<option value="all_champions">All Champions</option>
-					<option selected="selected" value="scripts_available">Scripts Available</option>
-					<option value="scripts_notavailable">Scripts Not Available</option>
-				</select>
-			</div>
-			<div id="search-champion-role" class="search-champion-role pull-right">
-				<button id="type_All" value="selected" class="btn btn-default active" onclick="champions_SortList(this)"><img src="images/roles/all.png" width="100%"></button>
-				<button id="type_Marksman" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/marksman.png" width="100%"></button>
-				<button id="type_Assasin" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/assasin.png" width="100%"></button>
-				<button id="type_Fighter" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/fighter.png" width="100%"></button>
-				<button id="type_Mage" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/mage.png" width="100%"></button>
-				<button id="type_Support" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/support.png" width="100%"></button>
-				<button id="type_Tank" value="notselected" class="btn btn-default" onclick="champions_SortList(this)"><img src="images/roles/tank.png" width="100%"></button>
-			</div>
-	  	</div>
+        <hr>
 
-	  	<hr>
+        <div>
+            <div id="champion-list" class="champion-list list-group">
 
-	  	<div>
-		  	<div id="champion-list" class="champion-list list-group">
-				
-			</div>
-			<ul id="champion-info" class="champion-info list-group">
+            </div>
+            <ul id="champion-info" class="champion-info list-group">
 
-			</ul>
-		</div>
+            </ul>
+        </div>
 
-	  	<footer class="footer">
-	  		<p style="display: inline-block;"><a href="https://www.elobuddy.net/profile/1798-chaos/">Chaos</a> developed this Addon Database.</p>
-	  		<p style="display: inline-block;" class="pull-right">Theme by <a href="https://www.elobuddy.net/profile/1798-chaos/">Kreiz59</a>.</p>
-	  	</footer>
-	</div>
+        <footer class="footer">
+            <p style="display: inline-block;"><a href="https://www.elobuddy.net/profile/1798-chaos/">Chaos</a> developed this Addon Database.</p>
+            <p style="display: inline-block;" class="pull-right">Theme by <a href="https://www.elobuddy.net/profile/1798-chaos/">Kreiz59</a>.</p>
+        </footer>
+    </div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://use.fontawesome.com/2ac8283ad1.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/2ac8283ad1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
 
-	<script type="text/javascript">
-		Array.prototype.contains = function(obj) {
-		    var i = this.length;
-		    while (i--) {
-		        if (this[i] === obj) {
-		            return true;
-		        }
-		    }
-		    return false;
-		}
+    <script type="text/javascript">
+        Array.prototype.contains = function(obj) {
+            var i = this.length;
+            while (i--) {
+                if (this[i] === obj) {
+                    return true;
+                }
+            }
+            return false;
+        }
 
-		String.prototype.capitalizeFirstLetter = function() {
-			return this.charAt(0).toUpperCase() + this.slice(1);
-		}
+        String.prototype.capitalizeFirstLetter = function() {
+            return this.charAt(0).toUpperCase() + this.slice(1);
+        }
 
-		var addon_database = "";
-		$.getJSON("databases/addon-database.json", function(json) {
-				addon_database = json;
-				champions_CreateList();
-			}).fail(function(jqXHR) {
-		    	bootbox.alert("There is a problem with addon database!");
-		});
+        var addon_database = "";
+        $.getJSON("databases/addon-database.json", function(json) {
+            addon_database = json;
+            champions_CreateList();
+        }).fail(function(jqXHR) {
+            bootbox.alert("There is a problem with addon database!");
+        });
 
-		var addons_list = new Array(),
-			champion_list = new Array(),
-			sorted_by = "type_All";
+        var addons_list = new Array(),
+            champion_list = new Array(),
+            sorted_by = "type_All";
 
-		function champions_CreateList()
-		{
-			champion_list = new Array();
-			addons_list = new Array();
+        function champions_CreateList() {
+            champion_list = new Array();
+            addons_list = new Array();
 
-			var type = document.getElementById("champion_listType"),
-				name = document.getElementById("champion_searchBox");
+            var type = document.getElementById("champion_listType"),
+                name = document.getElementById("champion_searchBox");
 
-			switch (type.value)
-			{
-				case "all_champions":
-				{
-					for (var champion in addon_database.database)
-					{
-						if (champion.includes(name.value) && champions_Check(champion, sorted_by)) 
-							champion_list.push(champion);
+            switch (type.value) {
+                case "all_champions":
+                    {
+                        for (var champion in addon_database.database) {
+                            if (champion.includes(name.value) && champions_Check(champion, sorted_by))
+                                champion_list.push(champion);
 
-						for (var addon in addon_database.database[champion])
-						{
-							addons_list.push(new Array(champion, addon, addon_database.database[champion][addon]));
-						}
-					}
-					break;
-				}
-				case "scripts_notavailable":
-				{
-					for (var champion in addon_database.database)
-					{
-						if (champion.includes(name.value) && champions_Check(champion, sorted_by)) champion_list.push(champion);
-						for (var addon in addon_database.database[champion])
-						{
-							if (champion_list.contains(champion)) 
-								champion_list.splice(champion, 1);
-						}
-					}
-					break;
-				}
-				default:
-				{
-					for (var champion in addon_database.database)
-					{
-						for (var addon in addon_database.database[champion])
-						{
-							if (!champion_list.contains(champion) && champion.includes(name.value) && champions_Check(champion, sorted_by))
-								champion_list.push(champion);
-							
-							if (champions_Check(champion, sorted_by))
-								addons_list.push(new Array(champion, addon, addon_database.database[champion][addon]));
-						}
-					}
-					break;
-				}
-			}
+                            for (var addon in addon_database.database[champion]) {
+                                addons_list.push(new Array(champion, addon, addon_database.database[champion][addon]));
+                            }
+                        }
+                        break;
+                    }
+                case "scripts_notavailable":
+                    {
+                        for (var champion in addon_database.database) {
+                            if (champion.includes(name.value) && champions_Check(champion, sorted_by)) champion_list.push(champion);
+                            for (var addon in addon_database.database[champion]) {
+                                if (champion_list.contains(champion))
+                                    champion_list.splice(champion, 1);
+                            }
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        for (var champion in addon_database.database) {
+                            for (var addon in addon_database.database[champion]) {
+                                if (!champion_list.contains(champion) && champion.includes(name.value) && champions_Check(champion, sorted_by))
+                                    champion_list.push(champion);
 
-			champions_AddToList(champion_list);
-		}
+                                if (champions_Check(champion, sorted_by))
+                                    addons_list.push(new Array(champion, addon, addon_database.database[champion][addon]));
+                            }
+                        }
+                        break;
+                    }
+            }
 
-		function champions_AddToList(champions)
-		{
-			var d = document.getElementById("champion-list");
-			d.innerHTML = "";
+            champions_AddToList(champion_list);
+        }
 
-			var any = false;
-			for (var i = 0; i < champions.length; i++)
-			{
-				any = true
-				d.innerHTML += '<a href="#" class="list-group-item" onclick="champions_ShowAddons(\'' + champions[i] + '\')">' + champions[i] + '<img src="http://ddragon.leagueoflegends.com/cdn/7.2.1/img/champion/' + champions[i].replace(" ", "").replace(".", "").replace("'", "").toLowerCase().capitalizeFirstLetter() + '.png" class="avatar"></a>';
-			}
-			if (!any)
-				d.innerHTML += '<li class="list-group-item">Nothing to show</li>';
-		}
+        function champions_AddToList(champions) {
+            var d = document.getElementById("champion-list");
+            d.innerHTML = "";
 
-		function champions_ShowAddons(champion)
-		{
-			var d = document.getElementById("champion-info");
-			d.innerHTML = "";
+            var any = false;
+            for (var i = 0; i < champions.length; i++) {
+                any = true
+                d.innerHTML += '<a href="#" class="list-group-item" onclick="champions_ShowAddons(\'' + champions[i] + '\')">' + champions[i] + '<img src="http://ddragon.leagueoflegends.com/cdn/7.2.1/img/champion/' + champions[i].replace(" ", "").replace(".", "").replace("'", "").toLowerCase().capitalizeFirstLetter() + '.png" class="avatar"></a>';
+            }
+            if (!any)
+                d.innerHTML += '<li class="list-group-item">Nothing to show</li>';
+        }
 
-			var any = false;
-			for (var i = 0; i < addons_list.length; i++)
-			{
-				if (addons_list[i][0] == champion)
-				{
-					var install = "elobuddy://" + addons_list[i][2].split(" | ")[1];
-					any = true;
-					d.innerHTML += '<li class="list-group-item">' + addons_list[i][1] + '<div class="buttons pull-right"><a class="btn btn-default" href="'+addons_list[i][2].split(" | ")[0]+'" role="button"><i class="fa fa-reply" aria-hidden="true"></i> Forum</a> <a class="btn btn-default" href="'+install+'" role="button"><i class="fa fa-download" aria-hidden="true"></i> Install</a> <a class="btn btn-default" href="'+addons_list[i][2].split(" | ")[1]+'" role="button"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></div></li>';
-				}
-			}
-			if (!any)
-				d.innerHTML += '<li class="list-group-item">Nothing to show</li>';
-		}
+        function champions_ShowAddons(champion) {
+            var d = document.getElementById("champion-info");
+            d.innerHTML = "";
 
-		function champions_SortList(target)
-		{
-			var d = document.getElementById(sorted_by);
-			d.className = d.className.replace(" active", "");
+            var any = false;
+            for (var i = 0; i < addons_list.length; i++) {
+                if (addons_list[i][0] == champion) {
+                    var install = "elobuddy://" + addons_list[i][2].split(" | ")[1];
+                    any = true;
+                    d.innerHTML += '<li class="list-group-item">' + addons_list[i][1] + '<div class="buttons pull-right"><a class="btn btn-default" href="' + addons_list[i][2].split(" | ")[0] + '" role="button"><i class="fa fa-reply" aria-hidden="true"></i> Forum</a> <a class="btn btn-default" href="' + install + '" role="button"><i class="fa fa-download" aria-hidden="true"></i> Install</a> <a class="btn btn-default" href="' + addons_list[i][2].split(" | ")[1] + '" role="button"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></div></li>';
+                }
+            }
+            if (!any)
+                d.innerHTML += '<li class="list-group-item">Nothing to show</li>';
+        }
 
-			sorted_by = target.id;
-			target.classList += " active";
-			champions_CreateList();
-		}
-		function champions_Check(champion, group)
-		{
-			var champions = "";
-			switch (group)
-			{
-				case "type_Marksman":
-					champions = ["Ashe", "Caitlyn", "Corki", "Draven", "Ezreal", "Graves", "Jayce", "Jhin", "Jinx", "Kalista", "Kennen", "Kindred", "Kog'Maw", "Lucian", "Miss Fortune", "Quinn", "Sivir", "Teemo", "Tristana", "Twitch", "Urgot", "Varus", "Vayne"];
-					break;
-				case "type_Assasin":
-					champions = ["Ahri", "Akali", "Diana", "Ekko", "Evelynn", "Fizz", "Kassadin", "Katarina", "Kha'Zix", "LeBlanc", "Master Yi", "Nidalee", "Nocturne", "Rengar", "Shaco", "Talon", "Zed"];
-					break;
-				case "type_Fighter":
-					champions = ["Aatrox", "Blitzcrank", "Camille", "Darius", "Diana", "Ekko", "Fiora", "Fizz", "Gangplank", "Garen", "Gnar", "Hecarim", "Illaoi", "Irelia", "Jarvan IV", "Jax", "Jayce", "Kayle", "Kha'Zix", "Kled", "Lee Sin", "Malphite", "Master Yi", "Mordekaiser", "Nasus", "Nautilus", "Nidalee", "Nocturne", "Nunu", "Olaf", "Pantheon", "Poppy", "Quinn", "Rammus", "Rek'Sai", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Sejuani", "Shyvana", "Singed", "Sion", "Skarner", "Swain", "Talon", "Taric", "Trundle", "Tryndamere", "Udyr", "Urgot", "Vi", "Volibear", "Warwick", "Wukong", "Xin Zhao", "Yasuo", "Yorick", "Zac", "Zed"];
-					break;
-				case "type_Support":
-					champions = ["Alistar", "Anivia", "Annie", "Bard", "Blitzcrank", "Braum", "Brand", "Ivern", "Janna", "Karma", "Leona", "Lulu", "Lux", "Miss Fortune", "Morgana", "Nami", "Nautilus", "Nunu", "Poppy", "Shen", "Sion", "Sona", "Soraka", "Tahm Kench", "Taric", "Thresh", "Trundle", "Vel'Koz", "Volibear",	 "Zilean", "Zyra"];
-					break;
-				case "type_Tank":
-					champions = ["Alistar", "Amumu", "Blitzcrank", "Braum", "Cho'Gath", "Darius", "Dr. Mundo", "Galio", "Garen", "Gnar", "Hecarim", "Illaoi", "Jarvan IV", "Kled", "Leona", "Malphite", "Maokai", "Nasus", "Nautilus", "Nunu", "Olaf", "Poppy", "Rammus", "Renekton", "Sejuani", "Shen", "Shyvana", "Singed", "Sion", "Skarner", "Tahm Kench", "Trundle", "Udyr", "Vladimir", "Volibear", "Warwick", "Wukong", "Yorick", "Zac"];
-					break;
-				case "type_Mage":
-					champions = ["Ahri", "Amumu", "Anivia", "Annie", "Aurelion Sol", "Azir", "Bard", "Brand", "Cassiopeia", "Cho'Gath", "Diana", "Elise", "Evelynn", "Ezreal", "Fiddlesticks", "Galio", "Gragas", "Heimerdinger", "Ivern", "Janna", "Karma", "Karthus", "Kassadin", "Katarina", "Kennen", "Kog'Maw", "LeBlanc", "Lissandra", "Lulu", "Lux", "Malzahar", "Maokai", "Morgana", "Nami", "Nunu", "Orianna", "Rumble", "Ryze", "Sona", "Soraka", "Swain", "Syndra", "Taliyah", "Twisted Fate", "Varus", "Veigar", "Vel'Koz", "Viktor", "Vladimir", "Xerath", "Ziggs", "Zilean", "Zyra"];
-					break;
-				default: return true;
-			}
-			return champions.contains(champion);
-		}
-	</script>
+        function champions_SortList(target) {
+            var d = document.getElementById(sorted_by);
+            d.className = d.className.replace(" active", "");
+
+            sorted_by = target.id;
+            target.classList += " active";
+            champions_CreateList();
+        }
+
+        function champions_Check(champion, group) {
+            var champions = "";
+            switch (group) {
+                case "type_Marksman":
+                    champions = ["Ashe", "Caitlyn", "Corki", "Draven", "Ezreal", "Graves", "Jayce", "Jhin", "Jinx", "Kalista", "Kennen", "Kindred", "Kog'Maw", "Lucian", "Miss Fortune", "Quinn", "Sivir", "Teemo", "Tristana", "Twitch", "Urgot", "Varus", "Vayne"];
+                    break;
+                case "type_Assasin":
+                    champions = ["Ahri", "Akali", "Diana", "Ekko", "Evelynn", "Fizz", "Kassadin", "Katarina", "Kha'Zix", "LeBlanc", "Master Yi", "Nidalee", "Nocturne", "Rengar", "Shaco", "Talon", "Zed"];
+                    break;
+                case "type_Fighter":
+                    champions = ["Aatrox", "Blitzcrank", "Camille", "Darius", "Diana", "Ekko", "Fiora", "Fizz", "Gangplank", "Garen", "Gnar", "Hecarim", "Illaoi", "Irelia", "Jarvan IV", "Jax", "Jayce", "Kayle", "Kha'Zix", "Kled", "Lee Sin", "Malphite", "Master Yi", "Mordekaiser", "Nasus", "Nautilus", "Nidalee", "Nocturne", "Nunu", "Olaf", "Pantheon", "Poppy", "Quinn", "Rammus", "Rek'Sai", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Sejuani", "Shyvana", "Singed", "Sion", "Skarner", "Swain", "Talon", "Taric", "Trundle", "Tryndamere", "Udyr", "Urgot", "Vi", "Volibear", "Warwick", "Wukong", "Xin Zhao", "Yasuo", "Yorick", "Zac", "Zed"];
+                    break;
+                case "type_Support":
+                    champions = ["Alistar", "Anivia", "Annie", "Bard", "Blitzcrank", "Braum", "Brand", "Ivern", "Janna", "Karma", "Leona", "Lulu", "Lux", "Miss Fortune", "Morgana", "Nami", "Nautilus", "Nunu", "Poppy", "Shen", "Sion", "Sona", "Soraka", "Tahm Kench", "Taric", "Thresh", "Trundle", "Vel'Koz", "Volibear", "Zilean", "Zyra"];
+                    break;
+                case "type_Tank":
+                    champions = ["Alistar", "Amumu", "Blitzcrank", "Braum", "Cho'Gath", "Darius", "Dr. Mundo", "Galio", "Garen", "Gnar", "Hecarim", "Illaoi", "Jarvan IV", "Kled", "Leona", "Malphite", "Maokai", "Nasus", "Nautilus", "Nunu", "Olaf", "Poppy", "Rammus", "Renekton", "Sejuani", "Shen", "Shyvana", "Singed", "Sion", "Skarner", "Tahm Kench", "Trundle", "Udyr", "Vladimir", "Volibear", "Warwick", "Wukong", "Yorick", "Zac"];
+                    break;
+                case "type_Mage":
+                    champions = ["Ahri", "Amumu", "Anivia", "Annie", "Aurelion Sol", "Azir", "Bard", "Brand", "Cassiopeia", "Cho'Gath", "Diana", "Elise", "Evelynn", "Ezreal", "Fiddlesticks", "Galio", "Gragas", "Heimerdinger", "Ivern", "Janna", "Karma", "Karthus", "Kassadin", "Katarina", "Kennen", "Kog'Maw", "LeBlanc", "Lissandra", "Lulu", "Lux", "Malzahar", "Maokai", "Morgana", "Nami", "Nunu", "Orianna", "Rumble", "Ryze", "Sona", "Soraka", "Swain", "Syndra", "Taliyah", "Twisted Fate", "Varus", "Veigar", "Vel'Koz", "Viktor", "Vladimir", "Xerath", "Ziggs", "Zilean", "Zyra"];
+                    break;
+                default:
+                    return true;
+            }
+            return champions.contains(champion);
+        }
+    </script>
 </body>
 </html>
